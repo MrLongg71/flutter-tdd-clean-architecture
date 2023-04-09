@@ -4,8 +4,8 @@ import 'config_network.dart';
 
 Dio dio = Dio(
   BaseOptions(
-    connectTimeout: ConfigNetwork.connectTimeout,
-    receiveTimeout: ConfigNetwork.responseTimeout,
+    connectTimeout: const Duration(milliseconds: ConfigNetwork.connectTimeout),
+    receiveTimeout: const Duration(milliseconds: ConfigNetwork.responseTimeout),
     contentType: 'application/json; charset=utf-8',
     baseUrl: ConfigNetwork.apiUrl,
   ),

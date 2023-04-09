@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_tdd_clean_architecture/feature/history/presentation/pages/history_page.dart';
 
 import 'core/injector/injection_container.dart';
+import 'feature/product/presentation/pages/product_page.dart';
 
 void main() async {
   await configureDependencies();
@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const HistoryPage(),
+      home: const ProductPage(),
     );
   }
 }

@@ -1,16 +1,26 @@
-# flutter_tdd_clean_architecture
+# App Architecture
 
-flutter-tdd-clean-architecture
+This sample follows BLoC pattern + Clean Architecture.
 
-## Getting Started
+## Stack
 
-This project is a starting point for a Flutter application.
+- Flutter
 
-A few resources to get you started if this is your first Flutter project:
+- [Bloc](https://bloclibrary.dev/#/) for state management
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- [get_it](https://pub.dev/packages/get_it) for dependency injection
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Installation
+
+This app was created and tested on `Flutter 3.0.0` and `Dart 2.17.0` .
+
+```
+git clone https://github.com/MrLongg71/flutter-tdd-clean-architecture.git
+cd flutter-tdd-clean-architecture
+flutter packages get
+```
+
+For debug mode run `flutter run` and for production mode run `flutter run --release`
+
+To run the code generator using `freezed`, run `flutter pub run build_runner watch --delete-conflicting-outputs`.
+To run the code generator using `json_serializable`, run `flutter pub run build_runner build --delete-conflicting-outputs` 

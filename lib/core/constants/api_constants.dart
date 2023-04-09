@@ -1,3 +1,3 @@
 class ApiConstants {
-  static const String history = '/';
+  static const String history = '/products';
 }
