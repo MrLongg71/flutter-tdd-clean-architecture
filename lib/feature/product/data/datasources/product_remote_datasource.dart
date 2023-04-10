@@ -12,7 +12,7 @@ abstract class ProductRemoteDataSource {
   });
 }
 
-@injectable
+@Injectable(as: ProductRemoteDataSource)
 class ProductRemoteDataSourceImpl extends ProductRemoteDataSource {
   final AppClient? appClient;
 

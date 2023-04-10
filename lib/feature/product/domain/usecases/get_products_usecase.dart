@@ -4,7 +4,7 @@ import 'package:injectable/injectable.dart';
 import '../entities/product.dart';
 import '../repositories/product_repository.dart';
 
-@injectable
+@Injectable()
 class GetProductsUseCase implements UseCase<List<Product>, Params> {
   final ProductRepository productRepository;
 

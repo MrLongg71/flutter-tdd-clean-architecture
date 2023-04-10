@@ -3,7 +3,7 @@ import '../../domain/entities/product.dart';
 import '../../domain/repositories/product_repository.dart';
 import 'package:injectable/injectable.dart';
 
-@injectable
+@Injectable(as: ProductRepository)
 class ProductRepositoryImpl extends ProductRepository {
   final ProductRemoteDataSource historyRemoteDataSource;
 
