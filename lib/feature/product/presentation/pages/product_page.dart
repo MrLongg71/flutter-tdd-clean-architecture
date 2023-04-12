@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import '../../../../core/injector/injection_container.dart';
+import 'package:flutter_tdd_clean_architecture/feature/product/presentation/pages/product_detail_page.dart';
 
+import '../../../../core/injector/injection_container.dart';
 import '../blocs/product_bloc.dart';
 import '../blocs/product_event.dart';
 import '../blocs/product_state.dart';
@@ -42,41 +43,49 @@ class _ProductPageState extends State<ProductPage> {
                 vertical: 12,
               ),
               itemCount: state.items.length,
-              itemBuilder: (_, index) => Container(
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(10),
-                  border: Border.all(color: Colors.grey)
+              itemBuilder: (_, index) => InkWell(
+                onTap: () => Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) => ProductDetailPage(
+                      id: state.items[index].id ?? -1,
+                    ),
+                  ),
                 ),
-                margin: const EdgeInsets.only(top: 12),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: [
-                    Expanded(
-                      flex: 2,
-                      child: Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Image.network(
-                          state.items[index].thumbnail ?? '',
+                child: Container(
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10),
+                      border: Border.all(color: Colors.grey)),
+                  margin: const EdgeInsets.only(top: 12),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      Expanded(
+                        flex: 2,
+                        child: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Image.network(
+                            state.items[index].thumbnail ?? '',
+                          ),
                         ),
                       ),
-                    ),
-                    const SizedBox(width: 6),
-                    Expanded(
-                      flex: 8,
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            state.items[index].title ?? '',
-                          ),
-                          const SizedBox(height: 3),
-                          Text(
-                            '${state.items[index].price ?? ''}',
-                          ),
-                        ],
+                      const SizedBox(width: 6),
+                      Expanded(
+                        flex: 8,
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              state.items[index].title ?? '',
+                            ),
+                            const SizedBox(height: 3),
+                            Text(
+                              '${state.items[index].price ?? ''}',
+                            ),
+                          ],
+                        ),
                       ),
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
               ),
             );

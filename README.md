@@ -30,21 +30,21 @@ flutter packages get
 
 ## Major Libraries / Tools
 
-| Category                        	| Library/Tool   	| Link                                                       	|
-|---------------------------------	|----------------	|------------------------------------------------------------	|
-| Development                     	| Flutter - Dart 	| https://flutter.dev/                       	|
-| IDE 	| Android Studio         	| https://developer.android.com/studio               	|
-| Dependency Injection  | injectable       | https://pub.dev/packages/injectable                                   	|
-| Service Locator  | get_it       | https://pub.dev/packages/get_it                                   	|
-| Presentation Layer Mangement  | flutter_bloc       | https://pub.dev/packages/flutter_bloc  |
-| Code Generator  | Freezed       | https://pub.dev/packages/freezed |
-| HTTP Client  | Dio       | https://pub.dev/packages/dio|
+| Category                        	 | Library/Tool   	         | Link                                                       	            |
+|-----------------------------------|--------------------------|-------------------------------------------------------------------------|
+| Development                     	 | Flutter - Dart 	         | https://flutter.dev/                       	                            |
+| IDE 	                             | Android Studio         	 | https://developer.android.com/studio               	                    |
+| Dependency Injection              | injectable               | https://pub.dev/packages/injectable                                   	 |
+| Service Locator                   | get_it                   | https://pub.dev/packages/get_it                                   	     |
+| Presentation Layer Mangement      | flutter_bloc             | https://pub.dev/packages/flutter_bloc                                   |
+| Code Generator                    | Freezed                  | https://pub.dev/packages/freezed                                        |
+| HTTP Client                       | Dio                      | https://pub.dev/packages/dio                                            |
 
 To run the code generator using `freezed`, run `flutter pub run build_runner watch --delete-conflicting-outputs`.
 
 To run the code generator using `json_serializable`, run `flutter pub run build_runner build --delete-conflicting-outputs` 
 
-To run the code generator using `injectable_generator`, run ` flutter packages pub run build_runner watch` 
+To run the code generator using `injectable_generator`, run `flutter packages pub run build_runner watch --delete-conflicting-outputs` 
 
 
 ## Demo

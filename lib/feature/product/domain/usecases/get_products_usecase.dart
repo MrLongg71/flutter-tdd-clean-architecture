@@ -8,7 +8,7 @@ import '../repositories/product_repository.dart';
 class GetProductsUseCase implements UseCase<List<Product>, Params> {
   final ProductRepository productRepository;
 
-  GetProductsUseCase(this.productRepository);
+  GetProductsUseCase({required this.productRepository});
 
   @override
   Future<List<Product>> call(Params params) {

@@ -7,7 +7,7 @@ import '../exceptions/server_exception.dart';
 import 'app_header.dart';
 import 'http.dart';
 
-@injectable
+@singleton
 class AppClient {
   AppHeader header = AppHeader();
 

@@ -14,10 +14,10 @@ class ProductBloc extends Bloc<ProductEvent, ProductState> {
       : super(
           const ProductState(),
         ) {
-    on(_onGetCompanyInformation);
+    on(_onGetProductEvent);
   }
 
-  void _onGetCompanyInformation(
+  void _onGetProductEvent(
       OnGetProductEvent event, Emitter<ProductState> emit) async {
     emit(
       state.copyWith(

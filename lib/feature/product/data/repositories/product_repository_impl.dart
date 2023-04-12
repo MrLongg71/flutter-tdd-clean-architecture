@@ -19,4 +19,9 @@ class ProductRepositoryImpl extends ProductRepository {
       limit: 10,
     );
   }
+
+  @override
+  Future<Product> getProduct({required int id}) {
+    return historyRemoteDataSource.getProduct(id: id);
+  }
 }
